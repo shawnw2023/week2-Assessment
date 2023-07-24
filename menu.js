@@ -32,12 +32,12 @@
 
 //CODE HERE
 const pizza = {
-        name: meatLovers,
+        name: 'meatLovers',
         price: (16.99),
-        category: (entree),
+        category: 'entree',
         popularity: (80),
         rating: (9/10),
-        tags: [glutenFree, EggFree]
+        tags: ['glutenFree', 'EggFree']
 }
 
 
@@ -50,7 +50,7 @@ const pizza = {
 */
 
 //CODE HERE
-console.log(pizza.popularity)
+// console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -60,7 +60,7 @@ console.log(pizza.popularity)
 */
 
 //CODE HERE
-// console.log(pizza.indexOf(tags,1))
+// console.log(pizza.indexOf('tags', 2))
 
 /*
     Third, destructure the price off of the
@@ -70,6 +70,9 @@ console.log(pizza.popularity)
 */
 
 //CODE HERE
+// let price1 = new pizza('pepperoni',14.99,)
+// console.log(price1)
+
 
 
 /*
@@ -112,7 +115,7 @@ console.log(pizza.popularity)
 
 //CODE HERE
 
-const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
 
 
 

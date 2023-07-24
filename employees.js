@@ -66,7 +66,7 @@ console.log(empOne)
 */
 
 //CODE HERE
-
+let empTwo = {...empOne};
 
 
 //////////////////PROBLEM 2////////////////////
@@ -93,7 +93,18 @@ console.log(empOne)
 */
 
 //CODE HERE
-
+class manager extends Employee{
+    constructor(name, shift, employees){
+       super(name, shift, employees)
+       this.employees = [employees];
+    }
+    getEmployees(){
+    console.log(`${this.name} manages ${this.employees}`)
+    }
+    addEmployees(){
+        
+    }
+}
 
 
 /*

@@ -30,7 +30,11 @@
 */
 
 //CODE HERE
-class ticket
+class ticket{
+    constructor(items, ordertime, customerId){
+        
+    }
+}
     
         
 

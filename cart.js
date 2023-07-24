@@ -57,7 +57,9 @@ console.log(summedPrice)
 */
 
 //CODE HERE
-
+function calcFinalPrice(obj){
+    
+}
 
 
 //////////////////PROBLEM 3////////////////////

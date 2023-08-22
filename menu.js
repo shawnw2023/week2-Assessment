@@ -39,7 +39,7 @@ const pizza = {
         rating: (9/10),
         tags: ['glutenFree', 'EggFree']
 }
-
+// console.log(pizza)
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -60,7 +60,7 @@ const pizza = {
 */
 
 //CODE HERE
-// console.log(pizza.indexOf('tags', 2))
+console.log(pizza.tags[1])
 
 /*
     Third, destructure the price off of the
@@ -70,8 +70,8 @@ const pizza = {
 */
 
 //CODE HERE
-// let price1 = new pizza('pepperoni',14.99,)
-// console.log(price1)
+let {price} = pizza;
+console.log(price)
 
 
 
@@ -83,7 +83,8 @@ const pizza = {
 */
 
 //CODE HERE
-
+let {category} = pizza;
+console.log(category)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -98,7 +99,47 @@ const pizza = {
 */
 
 //CODE HERE
-
+const foodArr = [{
+    name: 'Pepperoni',
+    price: (14.99),
+    category: 'entree',
+    popularity: (76),
+    rating: (10/10),
+    tags: ['Classic']
+},
+{
+    name: 'Sausage',
+    price: (13.99),
+    category: 'entree',
+    popularity: (60),
+    rating: (7/10),
+    tags: ['Classic']
+},
+{
+    name: 'Pineapple',
+    price: (10.99),
+    category: 'entree',
+    popularity: (50),
+    rating: (4/10),
+    tags: ['glutenFree']
+},
+{
+    name: 'Chicken Ranch',
+    price: (18.99),
+    category: 'entree',
+    popularity: (90),
+    rating: (10/10),
+    tags: ['glutenFree', 'EggFree']
+},
+{
+    name: 'Cauliflower',
+    price: (16.99),
+    category: 'entree',
+    popularity: (80),
+    rating: (9/10),
+    tags: ['glutenFree', 'EggFree']
+},
+]
 
 
 //////////////////PROBLEM 4////////////////////
@@ -115,8 +156,8 @@ const pizza = {
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
-
+const filteredFood = foodArr.filter(element => element.tags.includes("Classic"))
+console.log(filteredFood)
 
 
 //////////////////PROBLEM 5////////////////////
@@ -159,7 +200,16 @@ const pizza = {
 */
 
 //CODE HERE
-
+let filterByProperty = (property, number, type) => {
+    let filteredArr = foodArr.filter(food => {
+        if(type === "above") {
+            return food[property] > number 
+        }else{
+            return food[property] < number
+        }
+    }) 
+    return filteredArr;
+}
 
 /*
     Invoke the `filterByProperty` function passing
@@ -169,3 +219,5 @@ const pizza = {
 */
 
 //CODE HERE
+
+console.log(filterByProperty("popularity", 80, "above"))

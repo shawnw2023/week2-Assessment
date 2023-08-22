@@ -57,9 +57,12 @@ console.log(summedPrice)
 */
 
 //CODE HERE
-function calcFinalPrice(obj){
-    
+function calcFinalPrice(cartTotal, couponValue, tax){
+    let finalTotal = cartTotal + (cartTotal * tax) - couponValue;
+    return finalTotal;
 }
+
+console.log(calcFinalPrice(100, 20, .06))
 
 
 //////////////////PROBLEM 3////////////////////
@@ -84,7 +87,10 @@ function calcFinalPrice(obj){
 
 /*
     TEXT ANSWER HERE
-
+    customer order('array')
+    credit card('number')
+    name('string')
+    totalPrice('number')
 */
 
 /*
@@ -93,5 +99,9 @@ function calcFinalPrice(obj){
 */
 
 //CODE HERE
-
-//seriously so lost with all of this
+let customerObject = {
+    customerOrder: ['cheeseburger', 'frenchFries'],
+    creditCard: 1234,
+    name: "shawn",
+    totalPrice: 10.99
+}
